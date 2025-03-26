@@ -1,0 +1,37 @@
+@import "../../styles.scss";
+
+.notfoundbody{
+    @include themify($themes){
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: themed('textColor');
+        background-color: themed('bgSoft');
+        .notfoundcard{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: themed('bg');
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            .notfoundtext{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .notfoundheader{
+                    font-weight: bold;
+                    font-size: 30px;
+                    span{
+                        color: #0085d7;
+                    }
+
+                }
+                .notfoundbodyText{
+                    color: themed('textColorSoft');
+                }
+            }
+        }
+    }
+}

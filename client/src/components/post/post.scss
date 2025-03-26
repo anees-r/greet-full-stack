@@ -1,0 +1,75 @@
+@import "../../styles.scss";
+.post{
+    @include themify($themes){
+        .container{
+            padding: 30px;
+            background-color: themed("bg");
+            color: themed("textColor");
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            .user{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .userInfo{
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                    color: themed('textColor');
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 100px;
+                        object-fit: cover;
+                    }
+                    .userDetail{
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            font-size: 12px;
+                            color: themed('textColorSoft');
+                        }
+                    }
+                }
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                span{
+                    color: themed('textColorSoft');
+                }
+                img{
+                    border-radius: 20px;
+                    width: 100%;
+                    max-height: 500px;
+                }
+            }
+
+            .interactions{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                @include mobile{
+                    justify-content: space-between;
+                }
+                @include tablet{
+                    justify-content: space-between;
+                }
+                gap: 25px;
+                .interaction{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    @include mobile{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

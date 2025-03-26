@@ -1,0 +1,107 @@
+@import "../../styles.scss";
+
+.register{
+    @include themify($themes){
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: themed('bg');
+        .card{
+            width: 50%;
+            background-color: themed('bgSoft');
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            flex-direction: row-reverse;
+            .left{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 60px;
+                background-color: #0085d7;
+                h1{
+                    color: white;
+                    font-size: 80px;
+                    line-height: 80px;
+                    margin: 0;
+                    
+                }
+                p{
+                    color: white;
+                }
+                span{
+                    color: white;
+                    font-size: 14px;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    color: white;
+                    background-color: #0085d7;
+                    border: solid 1px white;
+                    transition: background-color 0.3s, ;
+                }
+                button:hover{
+                    color: #0085d7;
+                    background-color: rgb(255, 255, 255);
+                    border: solid 1px white;
+                }
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                padding: 60px;
+                h1{
+                    color: themed('textColorSoft');
+                    font-size: 50px;
+                    line-height: 50px;
+                    margin: 0;
+                }
+                form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                    input{
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        border-bottom: 1;
+                        padding: 10px;
+                        background-color: themed('bgSoft');
+                        color: themed('textColor');
+                        outline: none;
+                        
+                    }
+                    button{
+                        width: 100%;
+                        padding: 10px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        color: white;
+                        background-color: #0085d7;
+                        border: solid 1px #0085d7;
+                        transition: background-color 0.3s, ;
+                    }
+                    button:hover{
+                        color: #0085d7;
+                        background-color: themed('bgSoft');
+                        border: solid 1px #0085d7;
+                    }
+                }
+            }
+        }
+    }
+}
