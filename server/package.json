@@ -1,0 +1,16 @@
+{
+  "name": "greet-server",
+  "version": "1.0.0",
+  "description": "backend for greet a social media platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "anees-r",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "sql": "^0.78.0"
+  }
+}
